@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+
+      <style>
+
+      *{
+          margin: 0;
+          padding: 0;
+          }
+
+      body{
+          background-image: url("image/trop.jpg");
+          background-size: cover;
+          width: 100%;
+          height: 100%;
+          }
+
+          .roof{
+            position: absolute;
+            top: 2%;
+            left: 1.5%;
+            width: 0;
+            height: 0;
+            border-left: 47px solid transparent;
+            border-right: 45px solid transparent;
+            border-bottom: 40px solid white;
+
+          }
+
+          a{
+            color: black;
+            background-color: white;
+            position: absolute;
+            left:2.2%;
+            top: 8%;
+            text-decoration: none;
+            width: 70px;
+            height: 50px;
+            text-align: center;
+
+          }
+
+
+      .container{
+          display: flex;
+          flex-direction: column;
+          }
+
+
+
+          #div1{
+            position: absolute;
+            left: 4%;
+            top: 20%;
+          }
+
+          #div2{
+            position: absolute;
+            left: 4%;
+            top: 40%;
+          }
+
+          #div3{
+            position: absolute;
+            left: 4%;
+            top: 60%;
+          }
+
+      #div4{
+          position: relative;
+          backface-visibility: visible;
+          width: 200px;
+          height: 100px;
+          margin: 0 auto;
+          padding: 10px;
+          border: 1px ;
+          }
+
+      img{
+          width: 200px;
+          height: 100px;
+          }
+
+      h1{
+          font-size: 40px;
+          font-style: italic;
+          color: #ffffff;
+          }
+
+      p{
+          font-size: 15px;
+          font-family: Cambria;
+          font-weight: bold;
+          color: #ffffff;
+          }
+
+      #myP{
+          background-image: url("image/mamae.png");
+          background-size: cover;
+          background-size: 400px 600px;
+          width: 400px;
+          height: 600px;
+          position: absolute;
+          left: 52%;
+          top: 20px;
+          background-color: #f9f9f3;
+          align-items: center;
+          font-size: 22px;
+          font-family: serif;
+          font-style: italic;
+          font-weight: bold;
+          color: #3A5311;
+          text-align: center;
+          border: 5px solid white;
+
+          margin: 0 auto;
+          }
+
+        #button1{
+          background-color: white;
+          color: blue;
+          font-style: italic;
+          font-weight: bolder;
+          padding: 14px 25px;
+          text-align: center;
+          text-decoration: none;
+          border: 1px solid white;
+          border-radius: 20px;
+          position: absolute;
+          top: 50%;
+          left: 27%;
+          }
+
+        #notice{
+          font-size: 15px;
+          font-family: Cambria;
+          font-weight: bold;
+          color: white;
+          margin-top: 15px;
+          margin-left: 25%;
+          }
+
+          .p1{
+            font-size: 15px;
+
+          }
+
+          #button2{
+            background-color: white;
+            color: blue;
+            font-style: italic;
+            font-weight: bolder;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid white;
+            border-radius: 20px;
+            position: absolute;
+            left: 27%;
+            top: 40%;
+          }
+
+
+
+
+
+      </style>
+    </head>
+    <body>
+
+      <a href="index.html">Home</a>
+      <div class="roof"></div>
+
+
+        <div class="container">
+
+
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="image/giphy2.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        </div>
+
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="image/giphy.gif" draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">
+        </div>
+
+        <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="image/giphy3.gif" draggable="true" ondragstart="drag(event)" id="drag3" width="800" height="1200">
+
+
+        </div>
+
+        <div id="myP">
+        <br>
+          <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+        </div>
+        <p class="p1">inviting you to join</p><br>
+        <h1>self</h1>
+        <h1>development</h1>
+        <h1>workshop</h1>
+        <p></p> <br> <br> <br>
+        <p>5th May 2021</p> <br>
+        <p>3pm onwards</p> <br>
+        <p>private room , Radission Hotel</p>
+        <p>contact us: 123 321</p>
+        </div>
+      </div>
+
+      <div>
+        <button id="button2">Save</button>
+        <button id="button1" onclick="myFunction()"> Customize template</button>
+        <p id="notice"></p>
+      </div>
+
+
+
+  <script>
+
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+
+  function myFunction() {
+    document.getElementById("myP").contentEditable = true;
+    document.getElementById("notice").innerHTML = "The template is now customizable.";
+  }
+
+  </script>
+
+    </body>
+  </html>

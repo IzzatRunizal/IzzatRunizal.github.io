@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Farewell party</title>
+    <link rel="stylesheet" href="corporate1.css">
+  </head>
+  <body>
+
+    <button id="button2">Switch color</button>
+    <button id="button3">Save</button>
+
+    <a href="index.html">Home</a>
+    <div class="triangle-up"></div>
+    <div class="container">
+
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="image/m.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+      </div>
+      <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="image/o.png" draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">
+      </div>
+      <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="image/p.png" draggable="true" ondragstart="drag(event)" id="drag3" width="88" height="31">
+      </div>
+
+      <div1 id="card">
+          <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <img  class="z1" src="image/2.png" >
+          <h1 id="heading">Business<br>Meeting</h1>
+          <div id="p1">15th May | 12PM<br>Bridex</div>
+          <div id="p2">For student only</div>
+          <div id="p3">For more detail<br>contact 333 222</div>
+          <div id="div5">POLITEKNIK BRUNEI</div>
+      </div1>
+
+    </div>
+
+    <button id="button1" onclick="myFunction()">Customize template</button>
+    <p id="demo"></p>
+    <div class="class1">Drag your icon next<br>to the heading</div>
+
+    <script>
+
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+
+    function myFunction() {
+      document.getElementById("card").contentEditable = true;
+      document.getElementById("demo").innerHTML = "The template is now customizable";
+    }
+
+    var color = ["#222f3e","#f368e0","#ee5253","#10ac84","#0abde3","#222f3e","#5f27cd",];
+    var i = 0;
+    document.querySelector("button").addEventListener("click",function(){
+        i = i < color.length ? ++i : 0;
+    document.querySelector("div1").style.background = color[i]
+    })
+
+    </script>
+
+  </body>
+</html>

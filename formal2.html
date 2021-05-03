@@ -1,0 +1,209 @@
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+      <style>
+
+      *{
+          margin: 0;
+          padding: 0;
+          }
+
+      body{
+          background-image: url("image/formalbackgnd.png");
+          background-repeat: no-repeat;
+          height: 50vh;
+          }
+
+      .container{
+          display: flex;
+          flex-direction: column;
+          }
+
+          .triangle-up {
+            position: absolute;
+            top: 2%;
+            left: 91.35%;
+          	width: 0;
+          	height: 0;
+          	border-left: 47px solid transparent;
+          	border-right: 45px solid transparent;
+          	border-bottom: 40px solid green;
+            
+          }
+
+          a{
+            color: black;
+            background-color: green;
+            position: absolute;
+            left:92.2%;
+            top: 8%;
+            text-decoration: none;
+            width: 70px;
+            height: 50px;
+            text-align: center;
+          }
+
+      #div1, #div2, #div3{
+          width: 400px;
+          height: 100px;
+          margin: 10px;
+          padding: 10px;
+          }
+
+      #dragdrop-landing{
+          position: relative;
+          backface-visibility: visible;
+          width: 380px;
+          height: 100px;
+          margin: 0 auto;
+          padding: 10px;
+          }
+
+      img{
+          width: 380px;
+          height: 100px;
+          }
+
+      h1{
+          font-size: 40px;
+          font-style: italic;
+          color: #3A5311;
+          }
+
+      p{
+          font-size: 15px;
+          font-family: Cambria;
+          font-weight: bold;
+          color: #3A5311;
+          }
+
+      #card{
+          width: 400px;
+          height: 600px;
+          position: absolute;
+          left: 52%;
+          top: 20px;
+          background-color: #f9f9f3;
+          align-items: center;
+          font-size: 22px;
+          font-family: serif;
+          font-style: italic;
+          font-weight: bold;
+          color: #3A5311;
+          text-align: center;
+          border: 5px solid green;
+          background-image: url("image/back3.png");
+          background-repeat: no-repeat;
+          background-size: 400px 600px;
+          margin: 0 auto;
+          }
+
+        #button1{
+          background-color: white;
+          color: green;
+          font-style: italic;
+          font-weight: bolder;
+          padding: 14px 25px;
+          text-align: center;
+          text-decoration: none;
+          border: 1px solid white;
+          border-radius: 20px;
+          margin-left: 150px;
+          }
+
+          #button2{
+            background-color: white;
+            color: green;
+            font-style: italic;
+            font-weight: bolder;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid white;
+            border-radius: 20px;
+            position: absolute;
+            left: 4%;
+            top: 64%;
+            }
+
+        #notice{
+          font-size: 15px;
+          font-family: Cambria;
+          font-weight: bold;
+          color: white;
+          margin-top: 15px;
+          margin-left: 150px;
+          }
+
+      </style>
+    </head>
+    <body>
+      <a href="index.html">Home</a>
+      <div class="triangle-up"></div>
+
+        <div class="container">
+
+
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="image/dd7.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        </div>
+
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="image/dd6.png" draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">
+        </div>
+
+        <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="image/dd8.png" draggable="true" ondragstart="drag(event)" id="drag3" width="800" height="1200">
+
+
+        </div>
+
+        <div id="card">
+        <br>
+          <div id="dragdrop-landing" ondrop="drop(event)" ondragover="allowDrop(event)">
+        </div>
+        <h1>Him</h1>
+        <h1>&</h1>
+        <h1>her</h1>
+        <p></p> <br> <br> <br>
+        <p>3rd May 2021</p> <br>
+        <p>4pm</p> <br>
+        <p>Indera Samudera Grand Hall</p>
+        </div>
+      </div>
+
+      <div>
+        <button id="button1" onclick="myFunction()"> Customize template</button>
+        <p id="notice"></p>
+        <button id="button2">Save</button>
+      </div>
+
+
+
+  <script>
+
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+
+  function myFunction() {
+    document.getElementById("card").contentEditable = true;
+    document.getElementById("notice").innerHTML = "The template is now customizable.";
+  }
+
+  </script>
+
+    </body>
+  </html>

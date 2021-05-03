@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Birthday party invitation</title>
+    <link rel="stylesheet" href="informal1.css">
+
+  </head>
+
+  <body>
+
+    <button id="kolor">Switch color</button>
+    <button id="button3">Save</button>
+
+    <a href="index.html">Home</a>
+    <div class="roof"></div>
+    <div class="container">
+
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="image/informal1.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+      </div>
+      <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="image/informal11.png" draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">
+      </div>
+      <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="image/informal3.png" draggable="true" ondragstart="drag(event)" id="drag3" width="88" height="31">
+      </div>
+
+
+      <div1 id="card">
+          <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <p>Please join us for Food and fun as we celebrate</p><br>
+          <div id="text1"><p>Name's 16th Birthday</p></div> <br>
+          <p>when?</p> <br>
+          <p>where?</p> <br>
+          <div id="div5">Dear recipient names,</div>
+      </div>
+
+    </div>
+
+    <button id="button1" onclick="myFunction()">Customize template</button>
+    <p id="demo"></p>
+
+    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+<lord-icon    src="https://cdn.lordicon.com/nkmsrxys.json"  id="giftbox"  trigger="loop"    colors="primary:#000000,secondary:#000000"    stroke="41"  scale="15"    style="width:250px;height:250px"></lord-icon>
+<lord-icon    src="https://cdn.lordicon.com/nkmsrxys.json"  id="giftbox1"  trigger="loop"    colors="primary:#000000,secondary:#000000"    stroke="41"  scale="15"    style="width:250px;height:250px"></lord-icon><script>
+
+
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+
+    function myFunction() {
+      document.getElementById("card").contentEditable = true;
+      document.getElementById("demo").innerHTML = "The template above is now customizable.";
+    }
+
+    var color = ["#222f3e","#f368e0","#ee5253","#10ac84","#0abde3","#222f3e","#5f27cd",];
+    var i = 0;
+    document.querySelector("button").addEventListener("click",function(){
+        i = i < color.length ? ++i : 0;
+    document.querySelector("div1").style.background = color[i]
+    })
+
+
+    </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,403 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: 54px;
+  font-style: italic;
+  font-weight: 100px;
+  text-align: center;
+}
+
+
+.nav{
+  display: grid;
+  margin-top: 0px;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  min-height: 10vh;
+  color: black;
+}
+
+#logo{
+  grid-column: 2/3;
+  font-size: 23px;
+}
+
+.s2{
+    background: linear-gradient(#000428, #002c3e  );
+}
+
+.container1{
+  margin-top: 100px;
+  margin-left: 190px;
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: absolute;
+  justify-content: left;
+}
+
+.card-container1{
+  width: 300px;
+  height: 400px;
+}
+
+.card1{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card-container1:hover .card1{
+  transform: rotateY(180deg);
+}
+
+.card1 figure{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.front1 .back1{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.card1 .front1{
+  background-image:url("image/back3.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  color: black;
+
+}
+
+.card1 .back1{
+  background: #98bf64;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+.container2{
+  margin-left: 870px;
+  margin-top: -400px;
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: absolute;
+  justify-content: right;
+
+}
+
+.card-container2{
+  width: 300px;
+  height: 400px;
+}
+
+.card2{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card-container2:hover .card2{
+  transform: rotateY(180deg);
+}
+
+.card2 figure{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card2 .front2{
+  background: red;
+  color: black;
+}
+
+.card2 .back2{
+  background: yellow;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.container3{
+  margin-top: 100px;
+  margin-left: 190px;
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: absolute;
+  justify-content: left;
+}
+
+.card-container3{
+  width: 300px;
+  height: 400px;
+}
+
+.card3{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card-container3:hover .card3{
+  transform: rotateY(180deg);
+}
+
+.card3 figure{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card3 .front3{
+  background: #d5f5ee;
+  color: black;
+}
+
+.card3 .back3{
+  background: #98bf64;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.container4{
+  margin-left: 870px;
+  margin-top: -400px;
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: absolute;
+  justify-content: right;
+
+}
+
+.card-container4{
+  width: 300px;
+  height: 400px;
+}
+
+.card4{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card-container4:hover .card4{
+  transform: rotateY(180deg);
+}
+
+.card4 figure{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card4 .front4{
+  background: red;
+  color: black;
+}
+
+.card4 .back4{
+  background: yellow;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.container5{
+  margin-top: 100px;
+  margin-left: 190px;
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: absolute;
+  justify-content: left;
+}
+
+.card-container5{
+  width: 300px;
+  height: 400px;
+}
+
+.card5{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card-container5:hover .card5{
+  transform: rotateY(180deg);
+}
+
+.card5 figure{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card5 .front5{
+  background: #d5f5ee;
+  color: black;
+}
+
+.card5 .back5{
+  background: #98bf64;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.container6{
+  margin-left: 870px;
+  margin-top: -400px;
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: absolute;
+  justify-content: right;
+
+}
+
+.card-container6{
+  width: 300px;
+  height: 400px;
+}
+
+.card6{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card-container6:hover .card6{
+  transform: rotateY(180deg);
+}
+
+.card6 figure{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card6 .front6{
+  background: red;
+  color: black;
+}
+
+.card6 .back6{
+  background: yellow;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.kontainer{
+  margin-top: 30%;
+  margin-left: 30%;
+  width: 250px;
+  height: 350px;
+  background:  #abd7eb;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%,-50%);
+  perspective: 1000px;
+}
+
+.kover{
+  width: 210px;
+  height: 100%;
+  position: absolute;
+  left: 40px;
+  background-color: #ffdddd;
+  transform:rotateY(-20deg);
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: all ,2s ease-in-out;
+}
+
+.kontainer:hover .kover{
+  transform: rotateY(-180deg);
+}
+
+figure{
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
